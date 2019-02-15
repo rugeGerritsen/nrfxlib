@@ -13,6 +13,7 @@ choice BT_LL_CHOICE
 
 config BT_LL_NRFXLIB
 	bool "Nordic proprietary BLE Link Layer"
+	select BT_HCI_VS_CUSTOM
 	select ZERO_LATENCY_IRQS
 	select FLASH_HAS_SUBSYS_DRIVER
 	select ENTROPY_HAS_SUBSYS_DRIVER
