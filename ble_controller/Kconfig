@@ -8,15 +8,18 @@
 # now with additional properties. Note that the dependencies of the
 # original config must be duplicated to not affect it's visibility.
 choice BT_LL_CHOICE
-	bool
-	depends on (BT_CTLR && BT_HCI && BT)
+	   bool
+	   depends on (BT_CTLR && BT_HCI && BT)
 
 config BT_LL_NRFXLIB
 	bool "Nordic proprietary BLE Link Layer"
 	select ZERO_LATENCY_IRQS
+	# This controller only supports nRF52, it does not support 51 or
+	# 91 (91 doesn't even have the physical HW needed for BLE).
 	select FLASH_HAS_SUBSYS_DRIVER
 	select ENTROPY_HAS_SUBSYS_DRIVER
 	select CLOCK_CONTROL_HAS_SUBSYS_DRIVER
+	depends on SOC_SERIES_NRF52X
 	help
 	  Use Nordic BLE Link Layer implementation.
 
