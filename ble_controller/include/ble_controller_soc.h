@@ -58,7 +58,7 @@ typedef void (*ble_controller_flash_callback_t)(uint32_t status);
 typedef void (*ble_controller_hf_clock_callback_t)(void);
 
 
-/** @brief Write data to flash.
+/** @brief Write data to flash
  *
  * This asynchronous API will ensure that the flash operation will not interfere with radio activity.
  * The completion will be communicated to the application through the provided callback function.
@@ -87,7 +87,7 @@ int32_t ble_controller_flash_write(uint32_t addr,
                                    ble_controller_flash_callback_t on_complete);
 
 
-/** @brief Erase a flash page.
+/** @brief Erase a flash page
  *
  * This asynchronous API will ensure that the flash operation will not interfere with radio activity.
  * The completion will be communicated to the application through the provided callback function.
@@ -138,7 +138,7 @@ uint32_t ble_controller_rand_vector_get(uint8_t * p_dst, uint16_t length);
 void ble_controller_rand_vector_get_blocking(uint8_t * p_dst, uint16_t length);
 
 
-/** @brief Encrypt a block according to the specified parameters.
+/** @brief Encrypts a block according to the specified parameters.
  *
  * The BLE Controller will use NRF_ECB encrypt the block. The encryption type is 128-bit AES.
  *
@@ -172,7 +172,7 @@ int32_t ble_controller_ecb_block_encrypt(const uint8_t key[16],
 int32_t ble_controller_hf_clock_request(ble_controller_hf_clock_callback_t on_started);
 
 
-/** @brief Release the high frequency crystal oscillator.
+/** @brief Releases the high frequency crystal oscillator.
  *
  * This API will stop the high frequency crystal oscillator. The BLE Controller may continue to
  * use the high frequency clock for BLE activity. However, the BLE Controller will automatically
@@ -192,7 +192,7 @@ int32_t ble_controller_hf_clock_release(void);
 int32_t ble_controller_hf_clock_is_running(bool * p_is_running);
 
 
-/** @brief Get the temperature measured on the chip.
+/** @brief Get the temperature measured on the chip
  *
  * This function will block until the temperature measurement is done.
  *

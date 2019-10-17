@@ -56,7 +56,7 @@ extern "C" {
  */
 #define BLE_CONTROLLER_DEFAULT_RX_PACKET_COUNT 3
 
-/** @brief Default connection event length. */
+/** @brief Default connection event length */
 #define BLE_CONTROLLER_DEFAULT_EVENT_LENGTH_US 7500UL
 
 /** @brief Recommended RC clock calibration timer interval. */
