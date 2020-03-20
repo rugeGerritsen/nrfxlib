@@ -5,11 +5,13 @@
  */
 
 /**
- * @defgroup mpsl_temp_api MPSL Library Temp API
+ * @file mpsl_temp.h
+ *
+ * @defgroup mpsl_temp MPSL Temperature Sensor interface
+ * @ingroup  mpsl
+ *
+ * The MPSL temperature sensor interface provides APIs for measuring the chip temperature.
  * @{
- *
- * @brief APIs for the MPSL Temp module.
- *
  */
 
 #ifndef MPSL_TEMP_H__
