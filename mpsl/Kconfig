@@ -8,7 +8,7 @@ config MPSL
 	bool "Nordic Multi Protocol Service Layer (MPSL)"
 	# MPSL only supports nRF52 and nRF53, it does not support nRF51 or nRF91.
 	select ZERO_LATENCY_IRQS
-	depends on (SOC_SERIES_NRF52X || SOC_SERIES_NRF53X)
+	depends on (SOC_SERIES_NRF52X || SOC_SERIES_NRF53X || SOC_SERIES_BSIM_NRF52X)
 	help
 	  Use Nordic Multi Protocol Service Layer (MPSL) implementation,
 	  providing services for single and multi-protocol implementations.
